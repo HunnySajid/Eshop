@@ -8,7 +8,7 @@ import rootSaga from './sagas';
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware]
 // applying it on the Store
-const store = createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(...middleware)));
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)));
 
 // then run the saga
 sagaMiddleware.run(rootSaga);
