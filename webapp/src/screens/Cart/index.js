@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, Card, ListGroup, Image, Button, Form } from 'react-bootstrap';
 import { getCartItems } from './store/selectors';
+import {LOGIN_ROUTE} from '../../navigation/routes';
 import { addCartItem, removeCartItem } from './store/actions';
 import { Message } from '../../components';
 const Cart = ({ history }) => {
@@ -13,7 +14,7 @@ const Cart = ({ history }) => {
         dispatch(removeCartItem(itemId));
     }
     const checkoutHandler = () => {
-        history.push('/login');
+        history.push(LOGIN_ROUTE);
     }
 
     return (

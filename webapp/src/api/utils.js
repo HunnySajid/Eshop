@@ -27,6 +27,14 @@ export function patch(url, data, attr = 'params') {
     });
 }
 
+export function put(url, data) {
+    return client({
+        method: 'put',
+        url: url,
+        data,
+    });
+}
+
 export function destroy(url, data) {
     return client({
         method: 'delete',

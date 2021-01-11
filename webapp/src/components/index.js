@@ -4,6 +4,7 @@ import Product from './Product';
 import Rating from './Rating';
 import Loader from './Loader';
 import Message from './Message';
+import FormContainer from './FormContainer';
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     Product,
     Rating,
     Loader,
-    Message
+    Message,
+    FormContainer
 }

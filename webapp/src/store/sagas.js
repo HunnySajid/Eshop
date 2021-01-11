@@ -1,4 +1,5 @@
 import { all, call } from 'redux-saga/effects';
+import authSaga from '../screens/Auth/store/sagas';
 import productsSaga from '../screens/Home/store/sagas';
 import productSaga from '../screens/Product/store/sagas';
 
@@ -6,6 +7,7 @@ import productSaga from '../screens/Product/store/sagas';
 export default function* rootSaga() {
     yield all([
         // all of the app related sagas will go here
+        call(authSaga),
         call(productsSaga),
         call(productSaga)
     ]);

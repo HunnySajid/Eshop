@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
+import auth from '../screens/Auth/store/reducer';
 import products from '../screens/Home/store/reducer';
 import product from '../screens/Product/store/reducer';
 import cart from '../screens/Cart/store/reducer';
 
 const appReducer = combineReducers({
+    auth,
     products,
     product,
     cart
